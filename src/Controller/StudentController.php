@@ -28,6 +28,8 @@ class StudentController extends AbstractController
 
     /**
      * @Route("/new", name="student_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -39,8 +41,10 @@ class StudentController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
 
             //XANDER HELPED
-            $test = $form->getData();
-            $student->setAddress(new Address($test["street"],$test["number"],$test["city"],$test["zipcode"]));
+            //$test = $form->getData();
+            //$student->setAddress(new Address($test["street"],$test["number"],$test["city"],$test["zipcode"]));
+
+            $student = $form->getData();
 
             $entityManager->persist($student);
             $entityManager->flush();

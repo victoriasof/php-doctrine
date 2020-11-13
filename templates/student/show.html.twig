@@ -25,7 +25,19 @@
             </tr>
             <tr>
                 <th>Address</th>
-                <td>{{ student.address }}</td>
+                <td>{{ student.address.street }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ student.address.streetNumber }}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ student.address.city}}</td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td>{{ student.address.zipcode }}</td>
             </tr>
         </tbody>
     </table>

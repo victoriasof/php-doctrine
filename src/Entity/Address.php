@@ -12,15 +12,16 @@ class Address {
     /** @Column(type="string") **/
     private $street;
 
-    /** @Column(type="string") **/
+    /** @Column(type="integer") **/
     private $streetNumber;
 
     /** @Column(type="string") **/
     private $city;
 
-    /** @Column(type="string") **/
+    /** @Column(type="integer") **/
     private $zipcode;
 
+    /*
     public function __construct(string $street, int $streetNumber, string $city, int $zipcode)
     {
         $this->street = $street;
@@ -28,8 +29,9 @@ class Address {
         $this->city = $city;
         $this->zipcode = $zipcode;
     }
+    */
 
-    public function getStreet(): string
+    public function getStreet()
     {
         return $this->street;
     }
@@ -39,7 +41,7 @@ class Address {
         $this->street = $street;
     }
 
-    public function getStreetNumber(): int
+    public function getStreetNumber()
     {
         return $this->streetNumber;
     }
@@ -49,7 +51,7 @@ class Address {
         $this->streetNumber = $streetNumber;
     }
 
-    public function getCity(): string
+    public function getCity()
     {
         return $this->city;
     }
@@ -59,7 +61,7 @@ class Address {
         $this->city = $city;
     }
 
-    public function getZipcode(): int
+    public function getZipcode()
     {
         return $this->zipcode;
     }
