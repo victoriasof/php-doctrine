@@ -15,7 +15,10 @@ class StudentType extends AbstractType
             ->add('firstName')
             ->add('lastName')
             ->add('email')
-            ->add('address')
+            ->add('street')
+            ->add('number')
+            ->add('city')
+            ->add('zipcode')
             ->add('teacher')
         ;
     }

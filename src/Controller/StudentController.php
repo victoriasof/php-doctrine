@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Address;
 use App\Entity\Student;
 use App\Form\StudentType;
 use App\Repository\StudentRepository;
@@ -36,6 +37,11 @@ class StudentController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            //XANDER HELPED
+            $test = $form->getData();
+            $student->setAddress(new Address($test["street"],$test["number"],$test["city"],$test["zipcode"]));
+
             $entityManager->persist($student);
             $entityManager->flush();
 
