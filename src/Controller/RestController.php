@@ -32,6 +32,8 @@ class RestController extends AbstractController
         return $this->render('rest/index.html.twig', [
             'controller_name' => 'RestController',
         ]);
+
+
     }
 
 
